@@ -1,1 +1,9 @@
-{"name":"panchengfu-portfolio","version":"1.0.0","private":true,"description":"潘城富的面试作品集","scripts":{"check":"node --check app.js && node --check projects.js"}}
+{
+  "name": "panchengfu-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "潘城富的面试作品集",
+  "scripts": {
+    "check": "node --check app.js && node --check projects.js && node --check community.js && node --check lifestyle.js"
+  }
+}

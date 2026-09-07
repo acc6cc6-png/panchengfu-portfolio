@@ -1,0 +1,94 @@
+/* Personal photographs: original files, composed only through page layout. */
+.hero-portrait { margin:0; position:relative; padding:10px 10px 0; background:#e6e9df; border:1px solid #d7ddcd; border-radius:9px; transform:rotate(1.5deg); }
+.portrait-photo { display:block; position:relative; padding:0; width:100%; overflow:hidden; background:#d9e1d2; border-radius:4px; }
+.portrait-photo img { width:100%; height:410px; display:block; object-fit:cover; object-position:50% 53%; transition:transform .45s; }
+.portrait-photo:hover img { transform:scale(1.025); }
+.portrait-photo .portrait-open { position:absolute; bottom:14px; right:14px; color:#fff; background:#253a2ab8; padding:8px 11px; border:1px solid #ffffff40; border-radius:3px; font-size:10px; backdrop-filter:blur(5px); }
+.hero-portrait figcaption { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:17px 9px; }
+.portrait-signature { font:italic 19px Georgia,serif; color:#45533c; }
+.hero-portrait figcaption a { font-size:10px; color:#68785b; border-bottom:1px solid #a5b299; padding-bottom:4px; }
+.hero-portrait figcaption a span { margin-left:12px; }
+.life-section { padding:0 0 76px; border-top:1px solid var(--line); }
+.life-section .section-top { padding-top:52px; margin-bottom:32px; }
+.life-editorial { display:grid; grid-template-columns:1.75fr 1fr; gap:66px; align-items:start; }
+.life-editorial figure { margin:0; min-width:0; }
+.life-photo { display:block; width:100%; padding:0; background:#dbe3df; position:relative; overflow:hidden; border-radius:4px; }
+.life-photo img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s; }
+.life-photo:hover img { transform:scale(1.025); }
+.life-landscape .life-photo { aspect-ratio:4/3; }
+.life-night .life-photo { aspect-ratio:3/4; }
+.photo-expand { position:absolute; bottom:14px; right:14px; height:32px; width:32px; border-radius:50%; background:#f5f6edde; display:grid; place-items:center; color:#3b513a; font-size:20px; }
+.life-editorial figcaption { padding:17px 1px 0; color:#68735f; }
+.life-editorial figcaption small { display:block; font:8px ui-monospace,monospace; letter-spacing:1.3px; color:#8b9581; margin-bottom:9px; }
+.life-editorial figcaption strong { font-size:14px; font-weight:500; }
+.life-landscape figcaption { display:flex; justify-content:space-between; gap:20px; align-items:end; }
+.life-landscape figcaption>span:last-child { font-size:10px; color:#8b9581; padding-bottom:1px; }
+.life-night { padding:37px 0 0; }
+.life-side-note { display:block; font:8px ui-monospace,monospace; letter-spacing:1.1px; color:#8b9581; margin:0 0 20px; }
+.life-album { margin-top:38px; border-block:1px solid var(--line); }
+.life-album summary { cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:18px; padding:21px 0; list-style:none; color:#617054; }
+.life-album summary::-webkit-details-marker { display:none; }
+.life-album summary:focus-visible { outline:3px solid #8b9b5d; outline-offset:4px; }
+.album-label,.album-count { display:flex; align-items:center; gap:12px; font-size:11px; }
+.album-mark { font-size:21px; color:#7d8d6c; }
+.album-count { font:9px ui-monospace,monospace; color:#909b84; gap:28px; }
+.album-toggle { font:20px sans-serif; color:#718164; width:20px; text-align:center; }
+.life-album-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:25px 18px; padding:7px 0 28px; }
+.life-thumb { min-width:0; padding:0; background:none; text-align:left; }
+.life-thumb-image { display:block; width:100%; aspect-ratio:4/5; border-radius:3px; overflow:hidden; background:#e0e5d9; }
+.life-thumb-image img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.life-thumb:hover img { transform:scale(1.035); }
+.life-thumb-title { display:block; padding-top:11px; font-size:11px; color:#657258; }
+.life-thumb-title small { display:block; font:8px ui-monospace,monospace; margin-top:7px; color:#939e87; }
+#life-dialog { width:min(1050px,calc(100% - 28px)); max-height:94dvh; padding:22px; }
+#life-dialog .dialog-heading h2 { font-size:22px; margin-top:9px; }
+.life-stage { height:65dvh; margin-top:18px; display:flex; align-items:center; justify-content:center; background:#e9ece3; border-radius:4px; overflow:hidden; }
+.life-stage img { display:block; width:100%; height:100%; object-fit:contain; }
+.life-photo-caption { font-size:11px; line-height:1.8; color:#778569; margin:12px 0; }
+.life-dialog-controls { display:flex; align-items:center; justify-content:space-between; gap:15px; border-top:1px solid var(--line); padding-top:13px; }
+.life-dialog-controls button { background:#e5eadb; padding:10px 15px; font-size:11px; color:#5b6d4b; border-radius:4px; }
+.life-dialog-controls>span { font:11px ui-monospace,monospace; color:#8c9a7c; }
+@media (max-width:1050px) {
+  .portrait-photo img { height:386px; }
+  .life-editorial { gap:38px; grid-template-columns:1.6fr 1fr; }
+  .life-side-note { font-size:7px; letter-spacing:.6px; }
+}
+@media (max-width:720px) {
+  .hero-portrait { max-width:380px; width:calc(100% - 8px); align-self:center; transform:rotate(1deg); padding:8px 8px 0; }
+  .portrait-photo img { height:340px; object-position:50% 49%; }
+  .hero-portrait figcaption { padding:14px 5px; }
+  .portrait-signature { font-size:18px; }
+  .hero-portrait figcaption a { font-size:9px; }
+  .portrait-photo .portrait-open { font-size:9px; bottom:11px; right:11px; }
+  .life-section { padding:0 0 45px; }
+  .life-section .section-top { padding-top:35px; margin-bottom:24px; }
+  .life-editorial { display:flex; flex-direction:column; gap:28px; }
+  .life-editorial .life-landscape { width:100%; }
+  .life-editorial .life-night { width:73%; align-self:flex-end; padding:0; }
+  .life-side-note { margin-bottom:12px; font-size:6px; letter-spacing:.5px; }
+  .life-editorial figcaption { padding-top:13px; }
+  .life-editorial figcaption small { font-size:7px; margin-bottom:7px; }
+  .life-editorial figcaption strong { font-size:12px; }
+  .life-landscape figcaption>span:last-child { font-size:8px; }
+  .photo-expand { width:28px; height:28px; font-size:17px; bottom:11px; right:11px; }
+  .life-album { margin-top:27px; }
+  .life-album summary { padding:17px 0; }
+  .album-label { font-size:10px; gap:9px; }
+  .album-count { font-size:8px; gap:14px; }
+  .life-album-grid { grid-template-columns:repeat(2,1fr); gap:21px 13px; padding-bottom:22px; }
+  .life-thumb-title { font-size:10px; padding-top:9px; }
+  .life-thumb-title small { font-size:7px; }
+  #life-dialog { padding:16px; }
+  #life-dialog .dialog-heading h2 { font-size:18px; }
+  #life-dialog .eyebrow { font-size:7px; letter-spacing:1px; }
+  .life-stage { height:60dvh; margin-top:16px; }
+  .life-photo-caption { font-size:10px; }
+  .life-dialog-controls button { font-size:10px; padding:10px 12px; }
+  .life-dialog-controls>span { font-size:10px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .portrait-photo img,.life-photo img,.life-thumb img { transition:none; }
+}
+@media print {
+  .hero-portrait,.life-section,#life-dialog { display:none!important; }
+}
